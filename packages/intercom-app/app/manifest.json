@@ -1,0 +1,57 @@
+{
+  "name": "Overturn for Intercom",
+  "author": {
+    "name": "Overturn",
+    "email": "shireen@overturn.run",
+    "url": "https://overturn.run"
+  },
+  "defaultLocale": "en",
+  "version": "0.1.0",
+  "description": "Overturn for Intercom: captures what Fin/AI drafted, what the teammate sent, and why, as a replayable case",
+  "canvas": {
+    "surfaces": ["inbox"]
+  },
+  "settings": [
+    {
+      "name": "overturn_api_key",
+      "type": "string",
+      "required": true,
+      "helpText": "A project API key from Overturn (Settings -> API keys)."
+    },
+    {
+      "name": "overturn_base_url",
+      "type": "string",
+      "required": false,
+      "default": "https://api.overturn.run",
+      "helpText": "Your Overturn API URL when self-hosting."
+    },
+    {
+      "name": "agent",
+      "type": "string",
+      "required": false,
+      "default": "support-reply",
+      "helpText": "The workflow name. One regression suite per workflow."
+    },
+    {
+      "name": "reason_pack",
+      "type": "string",
+      "required": false,
+      "default": "support",
+      "helpText": "Which one-click reasons teammates see: 'support' or 'claims'."
+    },
+    {
+      "name": "require_reason",
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "helpText": "Prompt for a reason when the draft was changed."
+    },
+    {
+      "name": "min_draft_chars",
+      "type": "string",
+      "required": false,
+      "default": "80",
+      "helpText": "Text inserted at least this long counts as a draft."
+    }
+  ]
+}
