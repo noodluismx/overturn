@@ -1,0 +1,45 @@
+{
+  "name": "Overturn Capture for Gorgias",
+  "version": "0.1.0",
+  "description": "Captures AI draft edits, reason codes, and outcomes inside Gorgias tickets",
+  "author": "Overturn AI",
+  "homepage_url": "https://overturn.run",
+  "frameworkVersion": "1.0",
+  "location": {
+    "ticket_sidebar": {
+      "url": "dist/index.html"
+    }
+  },
+  "parameters": [
+    {
+      "name": "overturn_api_key",
+      "type": "password",
+      "required": true,
+      "secure": true
+    },
+    {
+      "name": "agent",
+      "type": "text",
+      "required": false,
+      "default": "support-reply"
+    },
+    {
+      "name": "require_reason",
+      "type": "checkbox",
+      "required": false,
+      "default": true
+    },
+    {
+      "name": "reason_pack",
+      "type": "text",
+      "required": false,
+      "default": "support"
+    },
+    {
+      "name": "decision_fields",
+      "type": "text",
+      "required": false,
+      "default": "order_id:order_id,refund_amount:refund_amount"
+    }
+  ]
+}
